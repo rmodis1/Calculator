@@ -19,7 +19,7 @@ public class Calculator
         writer.WriteStartArray();
     }
 
-    public double DoOperation(double num1, double num2, string op)
+    public double DoOperation(double num1, double num2, string operation)
     {
         double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
         writer.WriteStartObject();
@@ -29,7 +29,7 @@ public class Calculator
         writer.WriteValue(num2);
         writer.WritePropertyName("Operation");
         // Use a switch statement to do the math.
-        switch (op)
+        switch (operation)
         {
             case "a":
                 result = num1 + num2;
