@@ -9,7 +9,7 @@ namespace CalculatorProgram
         {
             bool endApp = false;
             // Display title as the C# console calculator app.
-            Console.WriteLine("Console Calculator in C#\r");
+            Console.WriteLine("Console Calculator in C#\n");
             Console.WriteLine("------------------------\n");
 
             Calculator calculator = new Calculator();
@@ -26,7 +26,7 @@ namespace CalculatorProgram
                 Console.Write("Type a number, and then press Enter: ");
                 numInput1 = Console.ReadLine();
 
-                double cleanNum1 = 0;
+                double cleanNum1;
                 while (!double.TryParse(numInput1, out cleanNum1))
                 {
                     Console.Write("This is not valid input. Please enter an integer value: ");
@@ -37,7 +37,7 @@ namespace CalculatorProgram
                 Console.Write("Type another number, and then press Enter: ");
                 numInput2 = Console.ReadLine();
 
-                double cleanNum2 = 0;
+                double cleanNum2;
                 while (!double.TryParse(numInput2, out cleanNum2))
                 {
                     Console.Write("This is not valid input. Please enter an integer value: ");
